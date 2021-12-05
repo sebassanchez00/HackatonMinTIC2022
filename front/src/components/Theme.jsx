@@ -1,22 +1,17 @@
-import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const theme = createTheme({
+import { createTheme } from '@mui/material/styles';
+import { red, orange } from '@mui/material/colors';
+
+
+const Tema = createTheme({
   palette: {
     primary: {
-      // Purple and green play nicely together.
-      main: purple[500],
+      main: red[400],
     },
     secondary: {
-      // This is green.A700 as hex.
-      main: '#11cb5f',
+      main: orange[400],
     },
   },
 });
 
-export default function Palette() {
-  return (
-    <ThemeProvider theme={theme}>
-    </ThemeProvider>
-  );
-}
+export default Tema;

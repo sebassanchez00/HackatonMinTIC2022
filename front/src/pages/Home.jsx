@@ -1,10 +1,8 @@
 import React from 'react';
 import {
   Grid,
-  Paper,
   Button,
   Box,
-  ImageListItemBar,
   Card,
   CardMedia,
   CardContent,
@@ -15,16 +13,17 @@ import {
 import { Parallax, Background } from 'react-parallax';
 import Carousel from 'react-material-ui-carousel';
 import Image from 'material-ui-image';
-import { sizing, width } from '@mui/system';
+import { width } from '@mui/system';
 import img1 from '../assets/images/khamkeo-vilaysing-uaQhu9zw7dc-unsplash.jpg';
 import img2 from '../assets/images/sahin-sezer-dincer-WnKIHYO8SvA-unsplash.jpg';
 import img3 from '../assets/images/tamara-bellis-OjuwZq13RH0-unsplash.jpg';
 import img4 from '../assets/images/viktoria-bolonina-LYONQoDDe-c-unsplash.jpg';
+import img5 from '../assets/images/artem-beliaikin-zfzt6yz0DE8-unsplash.jpg';
 import logo from '../assets/icons/logo.png';
 
 function Home() {
   return (
-    <Box>
+    <>
       <Parallax
         blur={{ min: -15, max: 10 }}
         bgImageAlt="the dog"
@@ -35,7 +34,7 @@ function Home() {
             <Box
               sx={{
                 position: 'absolute',
-                zIndex: 2000,
+                zIndex: 1000,
                 height: '100vh',
                 width: '100vw',
               }}
@@ -54,7 +53,6 @@ function Home() {
                     <CardMedia
                       component="img"
                       height="140"
-
                       image={logo}
                       alt="ciudad mascotas"
                     />
@@ -86,7 +84,7 @@ function Home() {
                 imageStyle={{ height: '100vh', width: '100vw' }}
               />
               <Image
-                src={img2}
+                src={img5}
                 imageStyle={{ height: '100vh', width: '100vw' }}
               />
               <Image
@@ -95,6 +93,10 @@ function Home() {
               />
               <Image
                 src={img4}
+                imageStyle={{ height: '100vh', width: '100vw' }}
+              />
+              <Image
+                src={img2}
                 imageStyle={{ height: '100vh', width: '100vw' }}
               />
             </Carousel>
@@ -107,9 +109,11 @@ function Home() {
         strength={-200}
       >
         Aqui va el componente de los planes y el buscador
-        <div style={{ height: '100vh', width: '100vw', backgroundColor:'orange'}} />
+        <div
+          style={{ height: '100vh', width: '100vw', backgroundColor: 'orange' }}
+        />
       </Parallax>
-    </Box>
+    </>
   );
 }
 

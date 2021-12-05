@@ -13,6 +13,6 @@ exports.mongoConnect = () => {
   );
   dbConnection.once(
     'open',
-    () => { console.log('Connected to MongoDB'); },
+    () => { console.log('Connected o MongoDB'); },
   );
 };

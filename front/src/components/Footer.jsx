@@ -6,15 +6,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Footer() {
   return (
-    <AppBar position="bottom">
-      <Box sx={{ display: 'flex' }} justifyContent="space-around">
-        <Grid>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'flex' } }}
-          >
+    <AppBar position="sticky">
+      <Box
+        sx={{ display: 'flex', height: '100px' }}
+        justifyContent="space-around"
+      >
+        <Grid
+          sx={{
+            display: { xs: 'none', sm: 'flex' },
+          }}
+        >
+          <Typography variant="h6" noWrap>
             CIUDAD MASCOTAS
           </Typography>
         </Grid>

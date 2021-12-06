@@ -21,7 +21,7 @@ const handleClick = (event) => {
     if (anchor) {
       anchor.scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
+        block: 'start',
       });
     }
   };
@@ -47,7 +47,7 @@ export default function BackToTop(props) {
   return (
     <React.Fragment>
       <ScrollTop {...props}>
-        <Fab color="primary" size="small" aria-label="scroll back to top">
+        <Fab color="info" size="big" aria-label="scroll back to top" sx={{zindez:1000000}}>
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>

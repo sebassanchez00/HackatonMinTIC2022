@@ -11,6 +11,7 @@ import {
   Button,
   Tooltip,
   MenuItem,
+  MenuList,
 } from '@mui/material';
 
 import Image from 'material-ui-image';
@@ -19,7 +20,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import PropTypes from 'prop-types';
 
-const pages = ['Blog', 'Planes'];
+import logo2 from '../assets/icons/log (2).png';
+
+const pages = [
+  {id:1, name: 'Blog', ref: '/' },
+  {id:2, name: 'Planes', ref: '/crear_oferta' },
+  'Planes',
+];
 const settings = ['Perfil', 'Registre su negocio'];
 
 function ElevationScroll(props) {
@@ -65,8 +72,12 @@ const ResponsiveAppBar = function (props) {
       <AppBar position="fixed">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Box sx={{ flexGrow: 0 }}>
-              <Image src={logo} />
+            <Box sx={{ height: '50px', position: 'relative' }}>
+              <Image
+                color={'transparent'}
+                src={logo2}
+                styles={{ 'background-color': 'black' }}
+              />
             </Box>
             <Typography
               variant="h6"
@@ -107,14 +118,13 @@ const ResponsiveAppBar = function (props) {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem
-                    key={page}
-                    onClick={handleCloseNavMenu}
+                  <Button
+                    key={page.id}
                     // containerElement={<Link to={page.} />}
-                    href={page}
+                    href={page.ref}
                   >
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </Button>
                 ))}
               </Menu>
             </Box>
@@ -129,13 +139,19 @@ const ResponsiveAppBar = function (props) {
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
                 <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
+                  key={page.id}
                   sx={{ my: 2, color: 'white', display: 'block' }}
+                  href={page.ref}
                 >
-                  {page}
+                  {page.name}
                 </Button>
               ))}
+              <Button
+                href="/Crear_oferta"
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                boton
+              </Button>
             </Box>
             <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
               <Button sx={{ my: 2, color: 'white', display: 'block' }}>

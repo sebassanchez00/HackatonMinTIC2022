@@ -6,7 +6,7 @@ import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
-import '../styles/hideScrollBars.css';
+import '../Styles/hideScrollBars.css';
 import { Typography } from '@mui/material';
 
 export default function TitlebarImageList() {

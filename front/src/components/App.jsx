@@ -10,7 +10,7 @@ import Login from '../pages/Login';
 import { ThemeProvider } from '@mui/material/styles';
 import Tema from './Theme';
 import BackToTop from './ScrollTop';
-import '../styles/hideScrollBars.css';
+import '../Styles/hideScrollBars.css';
 
 const App = function () {
   return (

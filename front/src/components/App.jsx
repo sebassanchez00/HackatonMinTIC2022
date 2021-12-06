@@ -6,6 +6,7 @@ import NavigationBar from './NavigationBar';
 import Footer from './Footer';
 import Home from '../pages/Home';
 import CrearOferta from '../pages/CrearOferta';
+import Login from '../pages/Login';
 import { ThemeProvider } from '@mui/material/styles';
 import Tema from './Theme';
 import BackToTop from './ScrollTop';
@@ -25,6 +26,7 @@ const App = function () {
                 <Routes>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/crear_oferta" element={<CrearOferta />} />
+                  <Route exact path="/login" element={<Login/>}/>
                 </Routes>
               </BrowserRouter>
             </Box>

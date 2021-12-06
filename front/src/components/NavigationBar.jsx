@@ -24,7 +24,7 @@ import logo2 from '../assets/icons/log (2).png';
 
 const pages = [
   {id:1, name: 'Blog', ref: '/' },
-  {id:2, name: 'Planes', ref: '/crear_oferta' },
+  {id:2, name: 'Planes', ref: '/' },
   'Planes',
 ];
 const settings = ['Perfil', 'Registre su negocio'];
@@ -134,7 +134,7 @@ const ResponsiveAppBar = function (props) {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
             >
-              LOGO
+              CIUDAD MASCOTAS
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
@@ -146,15 +146,9 @@ const ResponsiveAppBar = function (props) {
                   {page.name}
                 </Button>
               ))}
-              <Button
-                href="/Crear_oferta"
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                boton
-              </Button>
             </Box>
             <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-              <Button sx={{ my: 2, color: 'white', display: 'block' }}>
+              <Button sx={{ my: 2, color: 'white', display: 'block' }} href="/Login">
                 Iniciar Sesion
               </Button>
             </Box>

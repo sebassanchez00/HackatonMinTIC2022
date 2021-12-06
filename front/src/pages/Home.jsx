@@ -201,7 +201,8 @@ function Home() {
         <Grid
           sx={{
             height: '300px',
-            width: '100vw',
+            width: '50vw',
+            margin: 'auto',
             my: 3,
           }}
           item
@@ -209,7 +210,7 @@ function Home() {
         >
           <Carousel
             style={{
-              display: 'flex'
+              margin: auto
             }}
             indicators={true}
             navButtonsAlwaysInvisible={false}

@@ -9,6 +9,7 @@ import CrearOferta from '../pages/CrearOferta';
 import { ThemeProvider } from '@mui/material/styles';
 import Tema from './Theme';
 import BackToTop from './ScrollTop';
+import '../styles/hideScrollBars.css';
 
 const App = function () {
   return (
@@ -18,8 +19,8 @@ const App = function () {
         <Box sx={{ flexGrow: 1 }}>
           <Grid container>
             <NavigationBar />
-            <Toolbar id="back-to-top-anchor" />
-            <Box sx={{ mt: '5px' }}>
+            <Toolbar />
+            <Box sx={{ mt: '5px'}} className="hsb" id="back-to-top-anchor">
               <BrowserRouter>
                 <Routes>
                   <Route exact path="/" element={<Home />} />
